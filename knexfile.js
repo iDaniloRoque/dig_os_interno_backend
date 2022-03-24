@@ -14,7 +14,7 @@ module.exports = {
         user: dbUser ,
         password: dbPass,
         database: dbData ,
-        port: dbPOrt
+        port: 2014
         }
   };
 
