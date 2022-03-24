@@ -1,7 +1,9 @@
-const { authSecret } = require('../.env')
+require("dotenv").config();
+const authSecret = process.env.DB_authSecret
+//const { authSecret } = require('../.env')
 const jwt = require('jwt-simple')
-const bcrypt = require('bcrypt-nodejs')
-const { DRIVERS } = require('mssql')
+
+
 
 module.exports = app => {
     const signin = async (req, res) => {

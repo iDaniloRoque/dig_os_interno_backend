@@ -1,13 +1,20 @@
-const { db } = require('./.env')
+//const { db } = require('./.env')
+require("dotenv").config();
+
+const dbServer = process.env.SERVER;
+const dbUser =  process.env.USER 
+const dbPass = process.env.PASSWORD 
+const dbData =  process.env.DATABASE 
+const dbPOrt =  process.env.DB_PORT 
 
 module.exports = {
   client: 'mssql',
         connection: {
-        server: process.env.SERVER ,
-        user: process.env.USER ,
-        password: process.env.PASSWORD ,
-        database: process.env.DATABASE ,
-        port: process.env.DATABASEPORT 
+        server: dbServer ,
+        user: dbUser ,
+        password: dbPass,
+        database: dbData ,
+        port: dbPOrt
         }
   };
 
