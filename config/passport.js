@@ -12,7 +12,7 @@ module.exports = app => {
     const strategy = new Strategy(params, (payload, done) => {
         
         app.db('TB_TECNICOS')
-            .where({TECNICO.ID:  payload.id})
+            .where({TECNICO_ID:  payload.id})
             .first()
             .then(user => done(null, user ? {...payload} : false))
             .catch(err => done(err, false))
