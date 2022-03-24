@@ -1,6 +1,7 @@
 //const { db } = require('./.env')
 require("dotenv").config();
 
+//Utilizando variaveis de sessão
 const dbServer = process.env.SERVER;
 const dbUser =  process.env.USER 
 const dbPass = process.env.PASSWORD 
