@@ -6,27 +6,23 @@ const { DRIVERS } = require('mssql')
 module.exports = app => {
     const signin = async (req, res) => {
         if(!req.body.email){
-            return res.status(400).send('Informe email')
+            return res.status(400).send('Informe e-mail')
         }
 
-       if(req.body.email !== 'danilo@danilo') return res.status(400).send('Email/Senha inválidos!')
-        
-        const user =  {
-            id: 1,
-            name: 'DaniloRoque',
-            email: 'dsr.proj3ct@gmail.com',
-            admin: 'true'
-        }
+        const user =  await app
+                .db('TB_TECNICOS')
+                .where({TECNICO_EMAIL : req.body.email})
+                .where({TECNICO_ATIVO : true})
 
-        if(!user) return res.status(400).send('Usuário não encontrado')
+        if(!user) return res.status(400).send('Usuário não encontrado ou não ativo')
 
         const now = Math.floor(Date.now()/1000)
 
         const payload = {
-            id: user.id,
-            name: user.name,
-            email: user.email,
-            admin: user.admin,
+            id: user.TECNICO_ID,
+            name: user.TECNICO_NOME,
+            email: user.TECNICO_EMAIL,
+            ativo: user.TECNICO_ATIVO,
             iat: now,
             exp: now + (60 * 60 * 24 * 3)
         }

@@ -1,11 +1,11 @@
 module.exports = {
-    authSecret: '123abc',
+    authSecret: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkRhbmlsb1JvcXVlIiwiaWF0IjoxNTE2MjM5MDIyfQ.LqruGXX1n5ufUwzgXdCgmvpFjLH8b6Ch3mzVuxtI7GE',
     db: {
-          server: 'dados.vision-lam.com.br',
-          user: 'sa',
+          server: 'digsist.com.br',
+          user: 'digsistemas03',
           password: '',
-          database: 'digsiste_03',
-          port: 14330
+          database: 'digsist_os',
+          port: 2014
           
     }
 }
