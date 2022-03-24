@@ -1,0 +1,11 @@
+module.exports = {
+    authSecret: '123abc',
+    db: {
+          server: 'dados.vision-lam.com.br',
+          user: 'sa',
+          password: '',
+          database: 'digsiste_03',
+          port: 14330
+          
+    }
+}
