@@ -1,7 +1,7 @@
 //const { db } = require('./.env')
 require("dotenv").config();
 
-const dbServer = process.env.SERVER;
+const dbServer = process.env.SERVEeR;
 const dbUser =  process.env.USER 
 const dbPass = process.env.PASSWORD 
 const dbData =  process.env.DATABASE 
