@@ -8,4 +8,7 @@ module.exports = app => {
     app.route('/clientes')
         .all(app.config.passport.authenticate())
         .get(app.api.client.get)
+
+    app.route('/cl')
+        .get(app.api.client.get)
 }
